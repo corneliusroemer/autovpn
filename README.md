@@ -3,7 +3,7 @@
 ## Installation
 
 ```
-pip install autovpn==0.1.0
+pip install autovpn
 ```
 
 ## Usage
