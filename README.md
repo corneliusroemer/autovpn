@@ -3,7 +3,7 @@
 ## Installation
 
 ```
-pip install autovpn==0.1.0
+pip install autovpn
 ```
 
 ## Usage
@@ -23,7 +23,7 @@ Commands:
 
 ## Configuration
 
-You need to add a configuration file `~/.vpnconfig` to your home directory with the following content:
+You need to add a configuration file `~/.autovpnconfig` to your home directory with the following content:
 ```
 # Path to Cisco Anyconnect VPN binary
 vpnpath = "/opt/cisco/anyconnect/bin/vpn" 

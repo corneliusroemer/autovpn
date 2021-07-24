@@ -10,7 +10,7 @@ def parse_config_file(path):
         return toml.loads(f.read())
 
 def get_config_dict():
-    return parse_config_file(f'{os.path.expanduser("~")}/.vpnconfig')
+    return parse_config_file(f'{os.path.expanduser("~")}/.autovpnconfig')
 
 @click.group()
 def cli():
@@ -50,9 +50,15 @@ def disconnect():
 @cli.command()
 def configure():
     """Configure VPN"""
+    settings = get_config_dict()
+    settings['vpnpath'] = click.prompt(f'Enter VPN binary path', default=settings['vpnpath'], type=str)
+    settings['server'] = click.prompt(f'Enter VPN server', default=settings['server'], type=str)
+    settings['username'] = click.prompt(f'Enter VPN username', default=settings['username'], type=str)
+    settings['password'] = click.prompt(f'Enter VPN password', default=settings['password'], show_default = False, type=str)
+    with open(f'{os.path.expanduser("~")}/.autovpnconfig', 'w') as f:
+        f.write(toml.dumps(settings))
+    click.echo(f'Config file saved to {os.path.expanduser("~")}/.autovpnconfig')
 
 
 # TODO: Kill anyconnect UI
-# TODO: Check state first
-# TODO: login/logout
-# TODO: Configuration
+# TODO: Multiple servers
