@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased](https://github.com/corneliusroemer/autovpn/compare/v0.2.0...HEAD)
 
+## [0.2.1](https://github.com/corneliusroemer/autovpn/compare/v0.2.0...v0.2.1) - 2021-07-24
+### Changed
+- Minimum Python version is 3.7 not 3.6
+
 ## [0.2.0](https://github.com/corneliusroemer/autovpn/compare/v0.1.0...v0.2.0) - 2021-07-24
 ### Added
 - Configuration through the command line using `autovpn configure`

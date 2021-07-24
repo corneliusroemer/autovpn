@@ -6,14 +6,14 @@ setup(
     license="MIT",
     author="Cornelius Roemer",
     url="https://github.com/corneliusroemer/autovpn",
-    version="0.2.0",
+    version="0.2.1",
     py_modules=["autovpn"],
     install_requires=[
         "Click",
         "sortedcontainers",
         "toml",
     ],
-    python_requires=">=3.6",
+    python_requires=">=3.7",
     entry_points={
         "console_scripts": [
             "autovpn = autovpn:cli",
