@@ -6,12 +6,12 @@ setup(
     license="MIT",
     author="Cornelius Roemer",
     url="https://github.com/corneliusroemer/autovpn",
-    version="0.2.1",
+    version="0.2.2",
     py_modules=["autovpn"],
     install_requires=[
-        "Click",
-        "sortedcontainers",
-        "toml",
+        "Click>=8",
+        "sortedcontainers>=2",
+        "toml>0.10",
     ],
     python_requires=">=3.7",
     entry_points={
